@@ -1,13 +1,14 @@
 import ikhwanLogo from "../../asset/ikhwan-logo.png";
 import { Navbar } from "flowbite-react";
+import { NavLink } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
     <div className="sticky top-0 bg-white">
       <Navbar fluid={true} rounded={true} className="bg-white">
-        <Navbar.Brand
-          href="/"
-          className="md:ml-[8rem] lg:ml-[8rem] ml-[2.6rem]"
+        <NavLink
+          to="/"
+          className="md:ml-[8rem] lg:ml-[8rem] ml-[2.6rem] flex"
         >
           <img
             src={ikhwanLogo}
@@ -17,51 +18,51 @@ const NavbarComponent = () => {
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Ikhwan
           </span>
-        </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle className="" />
         <Navbar.Collapse className="md:mr-[8rem] lg:mr-[8rem] mr-0">
-          <a
+          <NavLink
             className="md:mb-0 text-center lg:mb-0 mb-2 pt-1.5 md:hover:border-b-2 hover:text-[#8b5cf6] border-[#8b5cf6]"
-            href="/navbars"
+            to="/"
           >
             Home
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="md:mb-0 text-center lg:mb-0 mb-2 pt-1.5 md:hover:border-b-2 hover:text-[#8b5cf6] border-[#8b5cf6]"
-            href="/navbars"
+            to="/about"
           >
             About
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="md:mb-0 text-center lg:mb-0 mb-2 pt-1.5 md:hover:border-b-2 hover:text-[#8b5cf6] border-[#8b5cf6]"
-            href="/navbars"
+            to="/service"
           >
             Services
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="md:mb-0 text-center lg:mb-0 mb-2 pt-1.5 md:hover:border-b-2 hover:text-[#8b5cf6] border-[#8b5cf6]"
-            href="/navbars"
+            to="/pricing"
           >
             Pricing
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="md:mb-0 text-center lg:mb-0 mb-2 pt-1.5 md:hover:border-b-2 hover:text-[#8b5cf6] border-[#8b5cf6]"
-            href="/navbars"
+            to="/contact"
           >
             Contact
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="bg-[#8b5cf6] text-white text-center md:mb-0 lg:mb-0 mb-2 px-5 py-1 pt-1.5 rounded-full"
-            href="/"
+            to="/login"
           >
             Sign Up
-          </a>
-          <a
+          </NavLink>
+          <NavLink
             className="border-2 border-[#8b5cf6] px-5 py-1 text-center rounded-full "
-            href="/navbars"
+            to="/login"
           >
             Sign In
-          </a>
+          </NavLink>
         </Navbar.Collapse>
       </Navbar>
     </div>
