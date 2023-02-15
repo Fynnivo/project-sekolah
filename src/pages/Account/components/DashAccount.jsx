@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getMe } from '../../../features/authSlice'
 import defaultProfile from '../../../asset/default-profile.png'
 import axios from 'axios'
-import { useForm } from 'react-hook-form'
 
 const DashAccount = () => {
     const dispatch = useDispatch()
